@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Список юзеров";
+}
+
+<div class="text-center">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Юзеры</h4>
+        </div>
+        <div class="card-body">
+            <table class="table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Username</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in (IEnumerable<User>)ViewData["Users"])
+                    {
+                        <tr>
+                            <td>@user.Id</td>
+                            <td>@user.Username</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</div>
