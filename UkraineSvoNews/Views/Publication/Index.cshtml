@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Список новостей";
+}
+@model IEnumerable<Publication>
+<a class="btn btn-primary" asp-action="Create">Добавление записи</a>
+<div class="row">
+    @foreach (var publication in Model)
+    {
+        <div class="card mt-5">
+            <div class="card-header">
+                <h4 class="card-title">@publication.Title</h4>
+            </div>
+            <div class="card-body">
+                @publication.Description
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-outline-info">Действие</a>
+            </div>
+        </div>
+    }
+</div>

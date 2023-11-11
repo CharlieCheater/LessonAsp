@@ -18,7 +18,6 @@ namespace UkraineSvoNews.Controllers
 
         public async Task<IActionResult> Index()
         {
-            ViewData["Users"] = await _context.Users.Where(x => x.Id < 2).ToListAsync();
             _logger.LogError("Ошибка доступа!!!");
             return View();
         }
